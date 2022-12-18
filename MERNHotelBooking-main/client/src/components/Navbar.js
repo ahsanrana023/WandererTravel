@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 function Navbar() {
   const user = JSON.parse(localStorage.getItem("currentUser"));
 
@@ -93,8 +94,18 @@ function Navbar() {
   return (
     <div>
       <nav className="navbar navbar-expand-lg">
-        <Link className="navbar-brand" to="/">
-          WANDERER
+        <Link
+          className="navbar-brand"
+          to="/"
+          style={{
+            fontStyle: "italic",
+            fontFamily: "georgia",
+            marginLeft: "10px",
+            fontSize: "26px",
+          }}
+        >
+          <span style={{ color: "#0688b7", fontWeight: "bold" }}>W</span>
+          anderer.
         </Link>
         <button
           className="navbar-toggler"
